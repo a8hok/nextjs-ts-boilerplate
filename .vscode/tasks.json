@@ -1,0 +1,27 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Project wide type checking with TypeScript",
+      "type": "npm",
+      "script": "check-types",
+      "problemMatcher": ["$tsc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "clear": true,
+        "reveal": "never"
+      }
+    },
+    {
+      "type": "npm",
+      "script": "lint:fix",
+      "problemMatcher": [],
+      "label": "npm: lint:fix",
+      "detail": "eslint . --fix"
+    }
+  ]
+}

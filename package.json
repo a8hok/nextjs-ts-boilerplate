@@ -6,20 +6,33 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "prepare": "husky install",
+    "pre-commit": "npm run lint",
+    "prettier": "prettier --write {app/**/*.tsx,app/**/*.ts}",
+    "type-check": "tsc --project tsconfig.json --pretty --noEmit",
+    "lint": "    eslint . --ext js,jsx,ts,tsx",
+		"lint:fix": "eslint . --ext js,jsx,ts,tsx --fix",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "@types/node": "18.15.12",
     "@types/react": "18.0.37",
     "@types/react-dom": "18.0.11",
-    "autoprefixer": "10.4.14",
-    "eslint": "8.38.0",
-    "eslint-config-next": "13.3.0",
     "next": "13.3.0",
-    "postcss": "8.4.23",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.1",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.38.0",
+    "eslint-config-next": "^13.3.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.1",
+    "postcss": "^8.4.23",
+    "prettier": "^2.8.7"
   }
 }

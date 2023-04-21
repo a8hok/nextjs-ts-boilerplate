@@ -1,0 +1,57 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "search.exclude": {
+    "package-lock.json": true
+  },
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": [
+    "source.addMissingImports",
+    "source.fixAll.eslint"
+  ],
+
+  // "eslint.run": "onSave",
+  "eslint.run": "onType",
+  /** work as a formatter, too! */
+  "eslint.format.enable": true,
+
+  /**
+   * ~~turn formatting off for JS, JSX, TS & TSX - we do this via eslint~~
+   * ESLint IS the formatter now!
+   * (Prettier is still in the picture, as we have configured it via eslint)
+  */
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+
+  /**
+   * Optional but IMPORTANT:
+   * If you have the prettier extension enabled for other languages like CSS and HTML,
+   * turn it off for JS since we are doing it through eslint already
+  */
+  "jest.autoRun": {
+    "watch": false // Start the jest with the watch flag
+    // "onStartup": ["all-tests"] // Run all tests upon project launch
+  },
+  "jest.showCoverageOnLoad": true, // Show code coverage when the project is launched
+  "jest.autoRevealOutput": "on-exec-error", // Don't automatically open test explorer terminal on launch
+  
+  // Multiple language settings for json and jsonc files
+  "[json][jsonc][yaml]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.ignorePath": ".gitignore" // Don't run prettier for files listed in .gitignore
+}
