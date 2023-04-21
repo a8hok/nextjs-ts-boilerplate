@@ -4,6 +4,7 @@
   "rules": {
     "no-console": "warn",
     "no-use-before-define": "error",
-    "no-unused-vars": "error"
+    "no-unused-vars": "error",
+    "indent": ["error", 2]
   }
 }

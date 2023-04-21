@@ -3,7 +3,7 @@ module.exports = {
   "**/*.ts?(x)": () => "yarn type-check",
   // Lint & Prettify TS and JS files
   "**/*.(ts|tsx|js)": (filenames) => [
-    `yarn lint . ${filenames.join(" ")}`,
-    `yarn prettier --write ${filenames.join(" ")}`,
+    `npm run lint:fix . ${filenames.join(" ")}`,
+    `npm run prettier --write ${filenames.join(" ")}`,
   ],
 };

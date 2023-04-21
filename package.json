@@ -6,10 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
     "prepare": "husky install",
     "pre-commit": "npm run lint",
+    "prettier": "prettier --write {app/**/*.tsx,app/**/*.ts}",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "postinstall": "husky install"
   },
   "dependencies": {
