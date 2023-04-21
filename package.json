@@ -10,8 +10,8 @@
     "pre-commit": "npm run lint",
     "prettier": "prettier --write {app/**/*.tsx,app/**/*.ts}",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "    eslint . --ext js,jsx,ts,tsx",
+		"lint:fix": "eslint . --ext js,jsx,ts,tsx --fix",
     "postinstall": "husky install"
   },
   "dependencies": {
