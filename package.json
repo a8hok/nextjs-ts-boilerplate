@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "pre-commit": "npm run lint"
+    "pre-commit": "npm run lint",
+    "type-check": "tsc --project tsconfig.json --pretty --noEmit",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "@types/node": "18.15.12",
@@ -27,6 +29,7 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
+    "lint-staged": "^13.2.1",
     "postcss": "^8.4.23",
     "prettier": "^2.8.7"
   }
