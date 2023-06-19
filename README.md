@@ -16,7 +16,6 @@
 ### 1. Clone this template:
  you can either download it or clone it with the help of git. 
  
- clone:
  ```bash 
  git clone https://github.com/a8hok/nextjs-ts-boilerplate.git
  ```
@@ -31,5 +30,4 @@ npm install
 ```bash
 npm run dev
 ```
-Note : Work in progress. I will gradually add new features and development tools to it. 
 
